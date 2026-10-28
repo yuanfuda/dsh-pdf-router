@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PDF Router",
+    "description": "Read PDFs and images with per-page routing: text layer when it exists, a pluggable vision OCR endpoint for scans, and layout-aware tables and formulas on request."
+  }
+}
