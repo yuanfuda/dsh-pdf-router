@@ -1,0 +1,12 @@
+# Ignore local runtime noise and anything that must never be published.
+node_modules/
+__pycache__/
+*.pyc
+runs/
+logs/
+*.log
+_*.md
+_*.pdf
+_temp/
+.DS_Store
+Thumbs.db

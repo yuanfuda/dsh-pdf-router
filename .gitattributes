@@ -1,0 +1,4 @@
+# Keep line endings stable across Windows/Linux so the pushed files match what
+# the harness and the market CI read.
+* text=auto eol=lf
+*.png binary

@@ -1,0 +1,51 @@
+{
+  "name": "dsh-pdf-router",
+  "version": "0.2.0",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "description": "Routing PDF reader for DeepSeek Harness: text layer when it exists, a pluggable vision OCR endpoint for scans, and a layout-aware pass that returns tables as HTML and formulas as LaTeX (MiniCPM-OCR recommended).",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "yuanfuda",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanfuda/dsh-pdf-router.git"
+  },
+  "homepage": "https://github.com/yuanfuda/dsh-pdf-router#readme",
+  "bugs": {
+    "url": "https://github.com/yuanfuda/dsh-pdf-router/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "pdf",
+    "ocr",
+    "minicpm",
+    "table-extraction",
+    "latex",
+    "document-parsing"
+  ],
+  "files": [
+    "index.js",
+    "router.py",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "icon-180.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

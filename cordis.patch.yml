@@ -1,0 +1,20 @@
+# dsh-pdf-router bundle: mounts one Host plugin that registers the `pdf_read` tool.
+# Tunables live in `config` so they survive upgrades of the package.
+#
+#   pythonPath      python that can `import pymupdf` (auto-detected, then "python")
+#   ocrEndpoint     OpenAI-compatible base URL; MiniCPM-OCR recommended
+#                   (default http://127.0.0.1:18499/v1)
+#   ocrModel        model name sent to that endpoint (default minicpm-ocr)
+#   ocrApiKey       bearer token, only for hosted endpoints
+#   ocrProfile      auto | minicpm | generic  (auto picks by endpoint)
+#   ocrPrompt       overrides the instruction text sent with each image
+#   sdkExe          minicpmvocr executable, needed only for `want: structure`
+#   layoutModelDir  PP-DocLayoutV3 inference dir, needed only for `want: structure`
+#   defaultWant     auto | text | structure (default auto)
+#   timeoutMs       whole-document budget (default 30 minutes)
+- insert:
+    - id: pdf-router
+      name: dsh-pdf-router
+      config:
+        ocrEndpoint: http://127.0.0.1:18499/v1
+        ocrModel: minicpm-ocr
